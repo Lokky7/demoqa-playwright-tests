@@ -1,0 +1,34 @@
+{
+  "name": "demoqa-playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright (TypeScript) UI test suite for demoqa.com",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "SLOWMO=250 playwright test --headed --workers=1",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:text-box": "playwright test tests/text-box.spec.ts tests/text-box-negative.spec.ts",
+    "test:check-box": "playwright test tests/check-box.spec.ts",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "install:browsers": "playwright install chromium"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "page-object",
+    "demoqa"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.4.0",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}
